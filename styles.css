@@ -71,12 +71,11 @@ button {
   padding: 0 32px;
 }
 
-/* Top Navbar */
 .navbar-liquida {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 48px;
+  padding: 16px 48px;
   background: transparent;
   position: relative;
   z-index: 100;
@@ -114,6 +113,44 @@ button {
 .nav-link-liquida:hover, .nav-link-liquida.active {
   background: var(--bg-sand);
   color: var(--navy-primary);
+}
+
+/* Mobile Hamburger Drawer Button */
+.btn-hamburger-liquida {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--navy-primary);
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-hamburger-liquida span {
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: var(--navy-primary);
+  margin: 3px 0;
+}
+
+/* Mobile Drawer Overlay */
+.mobile-menu-drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(246, 241, 228, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 32px 24px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-menu-drawer.open {
+  display: flex;
 }
 
 /* CTA Buttons */
@@ -348,34 +385,41 @@ footer.footer-liquida {
 
 @media (max-width: 768px) {
   .navbar-liquida {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
   }
-  .nav-links-liquida {
-    flex-wrap: wrap;
-    gap: 6px;
+
+  .desktop-nav-links {
+    display: none !important;
   }
-  .hero-liquida { padding: 36px 0 60px; }
-  h1.hero-h1-liquida { font-size: 2.2rem; }
+
+  .btn-hamburger-liquida {
+    display: flex !important;
+  }
+
+  .hero-liquida { padding: 24px 0 48px; }
+  h1.hero-h1-liquida { font-size: 2.1rem; line-height: 1.15; }
+  
   .btn-liquida-navy, .btn-liquida-gold, .btn-liquida-cream {
     width: 100%;
     margin-bottom: 8px;
   }
+  
   .slide-section-cream, .slide-section-navy, .slide-section-navy-dark, .slide-section-roadmap {
-    padding: 48px 16px;
+    padding: 48px 20px;
     min-height: auto;
     position: relative;
   }
+  
   .slide-grid-2 { grid-template-columns: 1fr; gap: 14px; }
   .footer-nav-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 
 @media (max-width: 480px) {
   h1.hero-h1-liquida { font-size: 1.85rem; }
-  .brand-logo-liquida { font-size: 1.1rem; }
-  .nav-link-liquida { font-size: 0.68rem; padding: 6px 12px; }
+  .brand-logo-liquida { font-size: 1.15rem; }
   .partner-item-box { font-size: 0.95rem; }
 }
 

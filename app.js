@@ -23,7 +23,12 @@ function initStickySlideObserver() {
   slides.forEach(slide => observer.observe(slide));
 }
 
-// Request Access Modal Drawer
+// Request Access Modal & Mobile Drawer
+function toggleMobileMenu() {
+  const drawer = document.getElementById('mobileMenuDrawer');
+  if (drawer) drawer.classList.toggle('open');
+}
+
 function openAccessModal() {
   const modal = document.getElementById('accessModalLiquida');
   if (modal) modal.style.display = 'flex';

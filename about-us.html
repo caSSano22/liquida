@@ -19,13 +19,46 @@
       Liquida
     </a>
 
-    <nav class="nav-links-liquida">
-      <a href="about-us.html" class="nav-link-liquida active">About Us</a>
-      <a href="blog.html" class="nav-link-liquida">Blog</a>
-      <a href="contact-us.html" class="nav-link-liquida">Contact Us</a>
-      <a href="https://x.com/xLiquida_" target="_blank" class="nav-link-liquida" style="display: flex; align-items: center; gap: 4px;">𝕏 @xLiquida_</a>
-    </nav>
+    <div class="desktop-nav-links" style="display: flex; align-items: center; gap: 16px;">
+      <nav class="nav-links-liquida">
+        <a href="about-us.html" class="nav-link-liquida active">About Us</a>
+        <a href="blog.html" class="nav-link-liquida">Blog</a>
+        <a href="contact-us.html" class="nav-link-liquida">Contact Us</a>
+        <a href="https://x.com/xLiquida_" target="_blank" class="nav-link-liquida" style="display: flex; align-items: center; gap: 4px;">𝕏 @xLiquida_</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Hamburger Drawer Button -->
+    <button class="btn-hamburger-liquida" onclick="toggleMobileMenu()" aria-label="Open mobile menu">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
   </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobileMenuDrawer" class="mobile-menu-drawer">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="brand-logo-liquida" onclick="toggleMobileMenu()">
+        <img src="logo.png" alt="Liquida logo" style="width: 28px; height: 28px; object-fit: contain;">
+        Liquida
+      </a>
+      <button style="background: transparent; border: none; font-size: 1.8rem; color: var(--navy-primary);" onclick="toggleMobileMenu()">&times;</button>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 20px; font-family: var(--font-sans); font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 40px;">
+      <a href="about-us.html" style="color: var(--navy-primary);" onclick="toggleMobileMenu()">About Us</a>
+      <a href="blog.html" style="color: var(--navy-primary);" onclick="toggleMobileMenu()">Blog</a>
+      <a href="contact-us.html" style="color: var(--navy-primary);" onclick="toggleMobileMenu()">Contact Us</a>
+      <a href="https://x.com/xLiquida_" target="_blank" style="color: var(--gold-border);" onclick="toggleMobileMenu()">𝕏 @xLiquida_</a>
+    </div>
+
+    <div style="margin-top: auto;">
+      <a href="contact-us.html" class="btn-liquida-navy" style="width: 100%; text-align: center; display: block;" onclick="toggleMobileMenu()">Request Access</a>
+    </div>
+  </div>
 
   <div class="wrap-container" style="padding-top: 60px; padding-bottom: 120px;">
     <h1 style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; margin-bottom: 20px;">About Liquida</h1>

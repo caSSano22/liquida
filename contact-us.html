@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Liquida Access Request</title>
+  <meta name="description" content="Request institutional access to Liquida regulated liquidity infrastructure on Robinhood Chain." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body style="padding-top: 20px;">
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar-liquida">
+    <a href="index.html" class="brand-logo-liquida">
+      Liquida
+    </a>
+
+    <nav class="nav-links-liquida">
+      <a href="about-us.html" class="nav-link-liquida">About Us</a>
+      <a href="blog.html" class="nav-link-liquida">Blog</a>
+      <a href="contact-us.html" class="nav-link-liquida active">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="wrap-container" style="padding-top: 60px; padding-bottom: 120px;">
+    <h1 style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; margin-bottom: 20px; text-align: center;">Request Institutional Access</h1>
+    <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 580px; margin: 0 auto 48px; text-align: center;">
+      Connect with our institutional onboarding team to access liquidity against sovereign & Robinhood collateral.
+    </p>
+
+    <form style="background: var(--bg-cream-light); border: 1px solid var(--stroke-gold); border-radius: 24px; padding: 44px; max-width: 600px; margin: 0 auto;" onsubmit="submitAccessForm(event)">
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; color: var(--navy-primary);">Institutional Email</label>
+        <input type="email" required placeholder="allocator@institution.com" style="width: 100%; padding: 14px 18px; border-radius: 12px; border: 1px solid #d7c7a2; background: #fff; font-family: var(--font-sans); font-size: 0.95rem;" />
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; color: var(--navy-primary);">Institution Name & Type</label>
+        <input type="text" required placeholder="e.g. Asset Manager, Treasury, Family Office" style="width: 100%; padding: 14px 18px; border-radius: 12px; border: 1px solid #d7c7a2; background: #fff; font-family: var(--font-sans); font-size: 0.95rem;" />
+      </div>
+
+      <div style="margin-bottom: 28px;">
+        <label style="display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; color: var(--navy-primary);">Est. Collateral Volume</label>
+        <select style="width: 100%; padding: 14px 18px; border-radius: 12px; border: 1px solid #d7c7a2; background: #fff; font-family: var(--font-sans); font-size: 0.95rem;">
+          <option>$1M - $10M</option>
+          <option>$10M - $50M</option>
+          <option>$50M+</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-liquida-navy" style="width: 100%; padding: 16px;">Submit Access Request</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
